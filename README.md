@@ -422,8 +422,7 @@ within the range tested.
 
 ## 9. Critical reflection
 
-This is the section the previous group's submission did not earn the marks
-for, and the section that does the most work here.
+This section explains the main interpretive limits of the measurement and defines what the results can and cannot support.
 
 ### 9.1 labMT is a general-English instrument used on technical prose
 
