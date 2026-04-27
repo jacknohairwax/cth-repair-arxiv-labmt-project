@@ -3,8 +3,7 @@
 > **Repair / resit submission for *Coding the Humanities* (UvA).**
 > The marker should be able to read this README front-to-back and know
 > what the question is, what the evidence is, what the limits are, and
-> how to rerun the workflow. There is no oral defence — so this README
-> does the work the defence would otherwise do.
+> how to rerun the workflow. This README is written to make the research question, evidence, limits, and workflow explicit.
 
 ---
 
