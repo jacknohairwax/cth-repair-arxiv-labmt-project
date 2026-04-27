@@ -1,0 +1,47 @@
+# Python cache / compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS system files
+.DS_Store
+
+# Jupyter / notebook checkpoints
+.ipynb_checkpoints/
+
+# Temporary / local scratch files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Local testing / synthetic fixtures
+synthetic_test/
+test_output/
+
+# Accidental old project leftovers
+old_imdb_project/
+old_huffpost_project/
+
+# Local helper scripts not needed for submission
+run_fetch.command
+
+# Keep actual assignment outputs tracked:
+# data/raw/
+# data/processed/
+# figures/
+# tables/
+# src/
+# README.md
+# AI_LOG.md
+# requirements.txt
+# optional_docs/
+
+# Keep placeholder files if used
+!.gitkeep
