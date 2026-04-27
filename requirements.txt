@@ -1,0 +1,16 @@
+# Coding the Humanities — Repair assignment dependencies.
+# Pinned to permissive lower bounds so the repository runs on a fresh
+# install of Python 3.10+ without surprises.
+#
+# Deliberately *not* used in this project (the README explains why):
+#   - seaborn        (matplotlib alone is enough)
+#   - scikit-learn   (no models or clustering needed)
+#   - nltk / spaCy   (we tokenise with a documented regex)
+#   - scipy          (the only inferential quantity is a normal-approx CI)
+#
+# Re-running ``pip install -r requirements.txt`` in a clean venv should be
+# sufficient to execute every script in src/.
+
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
