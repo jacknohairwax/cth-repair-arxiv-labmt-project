@@ -80,7 +80,7 @@ ROBUSTNESS_THRESHOLDS: tuple[int, ...] = (5, 10, 20)
 # scope the comparison to abstracts whose primary IS one of the six, so
 # we are comparing like with like rather than mixing in papers that the
 # authors themselves filed under another category. The README discusses
-# this filtering decision explicitly in Section 6 (Critical reflection).
+# this filtering decision explicitly in Section 9 (Critical reflection).
 TARGET_CATEGORIES: tuple[str, ...] = (
     "cs.AI",
     "cs.CL",
