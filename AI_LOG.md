@@ -4,7 +4,7 @@ This repository was produced as an individual repair assignment. The course allo
 
 ## Tools used
 
-- ChatGPT5.4 and Claude-Opus4.6 were used as drafting, debugging, and review assistants.
+- ChatGPT and Claude were used as drafting, debugging, and review assistants.
 - I used AI tools to review repository structure, code clarity, README framing, and reproducibility risks.
 - I made the final upload and submission decisions myself.
 - AI-generated suggestions were revised against the actual CSV outputs, figures, and assignment requirements before being included in the README.
