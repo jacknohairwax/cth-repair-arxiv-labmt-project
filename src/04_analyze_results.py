@@ -5,11 +5,10 @@
 Take per-abstract scores and produce the summary tables and figures that
 back the README.
 
-This script intentionally avoids the tools the previous group failed to
-explain in their oral defence: no bootstrap, no scikit-learn, no fancy
-inference theatre. The uncertainty is communicated as the standard error
-of the mean and a 95% normal-approximation confidence interval, which is
-what we can defend in plain English.
+This script keeps the analysis deliberately simple: no bootstrap,
+no scikit-learn, and no modelling beyond descriptive summaries and
+normal-approximation confidence intervals. The goal is to make each
+statistical step easy to inspect and explain.
 
 Outputs
 -------
