@@ -8,9 +8,8 @@ CSV at ``data/raw/arxiv_raw_metadata.csv``.
 Why this script exists
 ----------------------
 The raw corpus should be regenerable from a clean clone.
-Including the script *and* committing the resulting CSV gives them two paths:
-inspect the committed CSV directly, or rerun this script and verify it
-produces something equivalent.
+Including the script and the resulting CSV supports both inspection and
+regeneration of the corpus.
 
 Design notes
 ------------
