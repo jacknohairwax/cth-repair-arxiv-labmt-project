@@ -35,9 +35,9 @@ arXiv categories I sampled, with category means separated by at most
 **0.069 points on the 1–9 labMT scale** (cs.CV at 5.483 vs. stat.ML at
 5.414), and three pairwise comparisons whose 95% confidence intervals
 do not overlap (cs.CV vs. stat.ML, cs.CL vs. stat.ML, cs.CV vs. cs.AI;
-see section 8 and `figures/mean_happiness_by_category.png`). However,
-those differences are **best read as differences in vocabulary
-distributions, not as a ranking of disciplinary affect**, because:
+see section 8). However,those differences are **best read as differences
+in vocabulary distributions, not as a ranking of disciplinary affect**, 
+because:
 
 1. labMT was crowdsourced on general English from Twitter / Google Books
    / NYT / lyrics, not on technical academic prose.
