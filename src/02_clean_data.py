@@ -16,7 +16,7 @@ downstream scoring if left in:
   every per-paper happiness score becomes unreliable.
 * The ``year`` column can be missing if ``published`` was malformed.
 
-We do the minimum needed to feed the scorer. We do *not* lemmatise, lowercase
+This script does the minimum needed to feed the scorer. It does not lemmatise, lowercase
 words ahead of time, or strip stopwords here -- the scorer needs the raw
 token stream so its coverage statistic is honest.
 
@@ -49,7 +49,7 @@ MIN_TEXT_CHARS: int = 50
 # ---------------------------------------------------------------------------
 
 # A small set of LaTeX-ish artefacts that show up in arXiv abstract text and
-# are noise for any lexicon scorer. We do not try to "render" the LaTeX -- we
+# are noise for any lexicon scorer. It does not try to "render" the LaTeX -- it
 # just pull out the surface tokens that get scored.
 _RE_TEX_BACKSLASH_CMD = re.compile(r"\\[a-zA-Z]+")   # e.g. \mathbb, \alpha
 _RE_INLINE_MATH = re.compile(r"\$[^$]*\$")           # $...$
@@ -87,8 +87,8 @@ def main() -> None:
     df = pd.read_csv(RAW_PATH, dtype=str).fillna("")
     n_in = len(df)
 
-    # Clean title and abstract independently, then concatenate. We document
-    # the concatenation in the README so the marker can verify what 'text'
+    # Clean title and abstract independently, then concatenate. The concatenation 
+    # is documented in the README so the marker can verify what 'text'
     # corresponds to.
     df["title_clean"] = df["title"].map(clean_text)
     df["abstract_clean"] = df["abstract"].map(clean_text)
