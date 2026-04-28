@@ -1,8 +1,8 @@
 # Project notes
 
 Working notes I kept while putting this repository together. Not part of
-the formal submission narrative; the README is. These are kept for the
-marker who wants to see the decision trail.
+the formal submission narrative; the README is. I kept these notes as a 
+short decision trail for the project.
 
 ## Why this corpus, and not a smaller slice of IMDb
 
