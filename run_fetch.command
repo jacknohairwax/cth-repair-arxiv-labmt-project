@@ -1,6 +1,6 @@
 #!/bin/bash
 # Wrapper that double-clicks open in Terminal.
-# Runs the arXiv fetch script with the outputs folder as the working dir.
+# Runs the arXiv fetch script with the repository root as the working directory.
 #
 # What this does, step by step:
 #   1. cd into the directory of this script (so relative paths in the
