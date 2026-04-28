@@ -16,10 +16,10 @@ Design notes
 ------------
 * The arXiv API is queried per category, paginated 100 results at a time.
 * The script sleeps between requests (the arXiv ToU asks for ~3 seconds
-  between calls; so I use 3.0 seconds to be safe).
+  between calls; the delay is set to 3.0 seconds).
 * No API key is needed and none is sent. There is nothing secret to commit
   or to omit from the repo.
-* I use only the standard library + a small XML feed parser (``feedparser``
+* This script uses only the standard library + a small XML feed parser (``feedparser``
   is intentionally avoided to keep the dependency surface tiny). The arXiv
   API returns Atom XML; I parse the bits we need with ``xml.etree``.
 * This script does no scoring and no plotting. It is purely an extraction
@@ -49,7 +49,7 @@ from pathlib import Path
 # ``[SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate``
 # the first time it follows arXiv's HTTP -> HTTPS redirect.
 #
-# I try, in order:
+# The script tries, in order:
 #   1. ``certifi`` if it is installed (the wrapper script ``run_fetch.command``
 #      installs it for the user automatically).
 #   2. The default SSL context (works on Linux and on macOS installs that
@@ -72,7 +72,7 @@ _SSL_CONTEXT = _build_ssl_context()
 # Configuration
 # ---------------------------------------------------------------------------
 
-# The categories we want to compare. They were chosen to span recognisably
+# The categories compared in this project. They were chosen to span recognisably
 # different research vocabularies inside arXiv (NLP, vision, theoretical
 # stats, computational social science, neuro). The README justifies this
 # choice in detail. Replace any category here if it returns too few records
