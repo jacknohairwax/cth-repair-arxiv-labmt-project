@@ -69,5 +69,5 @@ more credible.
   labMT and so are already absent from the matched-token set; removing
   them upstream would only inflate the OOV count.
 - Topic modelling. This project is not trying to explain what abstracts are about.
-  Only to compare what fraction of their words land in a
+  It only compares what fraction of their words land in a
   general-English happiness lexicon, and what those words tend to score.
