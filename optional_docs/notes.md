@@ -23,7 +23,7 @@ enough that 200 abstracts each is still a manageable fetch.
 
 ## Why no bootstrap
 
-The previous group used bootstrap and could not explain in their oral
+Our previous group used bootstrap and could not explain in their oral
 defence what the resampling was doing or why a wider sample shrank the
 interval. For a per-category mean of n ≈ 200 abstracts, the standard
 error of the mean is a textbook quantity I can defend in plain English:
