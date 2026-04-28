@@ -6,13 +6,13 @@ marker who wants to see the decision trail.
 
 ## Why this corpus, and not a smaller slice of IMDb
 
-The original group project compared the 1,000 shortest and 1,000 longest
+Our previous group project compared the 1,000 shortest and 1,000 longest
 IMDb reviews. A length cut on the *same* dataset is not a different
 corpus, just a regrouping, which the resit guide explicitly disallows. 
 ArXiv is a different source (academic prose vs. consumer reviews), 
-a different genre (compressed scientificabstracts vs. opinion writing), 
-and a different metadata structure(``primary_category`` is institutional
-taxonomy, not user-supplied sentiment).
+a different genre (compressed scientific abstracts vs. opinion writing), 
+and a different metadata structure(`primary_category` is institutional
+taxonomy, not user supplied sentiment).
 
 ## Why six categories and not fewer
 
@@ -47,14 +47,14 @@ full lexicon and instead report coverage transparently.
 
 It removes abstracts so dense in jargon (e.g. pure mathematics with very
 few English words after the title) that a single labMT match would
-determine the score. It is high enough to bite (it removes a few percent
-of abstracts in jargon-heavy categories) but low enough that we are not
-silently throwing away most of the corpus.
+determine the score. In this run, the threshold did not remove any of the 
+target category abstracts, which is useful evidence that the results are 
+not being driven by near empty labMT matches. 
 
 ## What the robustness table is for
 
-The marker should see whether the *order* of categories on the happiness
-axis is stable when we tighten the threshold. If raising it to 20
+The robustness table checks whether the order of categories on the happiness
+axis is stable when the threshold is tightened. If raising it to 20
 matched tokens reorders the categories, that is evidence that the
 "ranking" is a thresholding artefact. If it does not, the comparison is
 more credible.
