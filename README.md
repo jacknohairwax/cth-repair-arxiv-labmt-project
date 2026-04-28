@@ -366,7 +366,7 @@ the only one large enough that the error bars do not touch.
 *Figure 2. Per-abstract `mean_happiness` by category. The mean-of-means
 in Figure 1 is a single number per category; this boxplot shows that the
 underlying per-abstract variation **substantially overlaps across
-categories**, which is the visual reason the section section 9 limits how the
+categories**, which is the visual reason the section 9 limits how the
 mean differences should be read.*
 
 ### 8.4 Coverage by category
