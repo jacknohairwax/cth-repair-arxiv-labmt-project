@@ -72,14 +72,13 @@ FIG_DIR: Path = Path("figures")
 MIN_MATCHED: int = 5
 ROBUSTNESS_THRESHOLDS: tuple[int, ...] = (5, 10, 20)
 
-# The six categories compared in this project. Because arXiv
-# allows authors to list multiple categories per paper and stamps the
-# *first one they listed* as ``primary_category``, a paper retrieved by
-# ``cat:cs.AI`` may end up with a different primary, e.g. ``cs.LG``. We
-# scope the comparison to abstracts whose primary IS one of the six, so
-# we are comparing like with like rather than mixing in papers that the
-# authors themselves filed under another category.The README discusses 
-# this filtering decision explicitly in Section 9 (Critical reflection).
+# The six categories compared in this project. Because arXiv allows authors
+# to list multiple categories per paper and stamps the first listed category
+# as `primary_category`, a paper retrieved by `cat:cs.AI` may end up with a
+# different primary, e.g. `cs.LG`. The comparison is scoped to abstracts whose
+# primary category is one of the six target categories. This keeps the aggregate
+# comparison like-for-like rather than mixing in papers primarily filed elsewhere.
+# The README discusses this filtering decision in Section 9.
 TARGET_CATEGORIES: tuple[str, ...] = (
     "cs.AI",
     "cs.CL",
