@@ -15,16 +15,17 @@ Pipeline
    happiness* of the matched tokens.
 5. Save ``data/processed/scored_abstracts.csv``.
 
-What I deliberately do not do
+What this script deliberately does not do
 ------------------------------
-* No bootstrap. Our previous group used bootstrap and could not explain
-  what it was doing; so I use straightforward standard errors of the mean
-  in the analysis step instead.
+* No bootstrap. Our previous group used bootstrap but did not explain it
+  clearly enough. This repair project therefore uses standard errors of
+  the mean in the analysis step, because that uncertainty estimate is
+  easier to inspect and defend.
 * No tf-idf weighting, no stopword removal at this stage. The marker can
   see the raw counts in the output and reason about them.
 * No "stop band" trimming (e.g. dropping words with happiness in [4, 6]).
-  The Dodds et al. paper uses one for time-series; I performed
-  per-abstract scoring on short text, where a stop band quickly empties
+  The Dodds et al. paper uses one for time-series; this project does 
+  per abstract scoring on short text, where a stop band quickly empties
   out the matched-token count and makes coverage look much worse than
   it is.
 
