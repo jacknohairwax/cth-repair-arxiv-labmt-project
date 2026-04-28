@@ -7,22 +7,20 @@ CSV at ``data/raw/arxiv_raw_metadata.csv``.
 
 Why this script exists
 ----------------------
-The raw corpus should be regenerable from a clean clone.
-Including the script and the resulting CSV supports both inspection and
-regeneration of the corpus.
+The raw corpus should be regenerable from a clean clone. Including the
+script and the resulting CSV supports both inspection and regeneration
+of the corpus.
 
 Design notes
 ------------
 * The arXiv API is queried per category, paginated 100 results at a time.
 * The script sleeps between requests (the arXiv ToU asks for ~3 seconds
   between calls; the delay is set to 3.0 seconds).
-* No API key is needed and none is sent. There is nothing secret to commit
-  or to omit from the repo.
-* This script uses only the standard library + a small XML feed parser (``feedparser``
-  is intentionally avoided to keep the dependency surface tiny). The arXiv
-  API returns Atom XML; the needed fields are parsed with ``xml.etree``.
+* No API key is needed and none is sent.
+* This script uses only the standard library plus `xml.etree`. The arXiv
+  API returns Atom XML, and the needed fields are parsed directly.
 * This script does no scoring and no plotting. It is purely an extraction
-  step. See ``02_clean_data.py`` for the next stage.
+  step. See `02_clean_data.py` for the next stage.
 
 Run from repo root:
     python src/01_fetch_arxiv_data.py
@@ -55,7 +53,7 @@ from pathlib import Path
 #      have already been certified, e.g. by Python's
 #      ``Install Certificates.command``).
 #
-# I never disable certificate verification.
+# Certificate verification is never disabled.
 
 def _build_ssl_context() -> ssl.SSLContext:
     try:
@@ -74,8 +72,8 @@ _SSL_CONTEXT = _build_ssl_context()
 # The categories compared in this project. They were chosen to span recognisably
 # different research vocabularies inside arXiv (NLP, vision, theoretical
 # stats, computational social science, neuro). The README justifies this
-# choice in detail. Replace any category here if it returns too few records
-# in your snapshot.
+# choice in detail. A category can be replaced here if it returns too few records
+# in a future snapshot.
 CATEGORIES: list[str] = [
     "cs.AI",
     "cs.CL",
