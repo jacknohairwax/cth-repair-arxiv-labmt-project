@@ -8,12 +8,11 @@ marker who wants to see the decision trail.
 
 The original group project compared the 1,000 shortest and 1,000 longest
 IMDb reviews. A length cut on the *same* dataset is not a different
-corpus, just a regrouping, which the resit guide explicitly disallows
-(§4 of the student guide). arXiv is a different source (academic prose
-vs. consumer reviews), a different genre (compressed scientific
-abstracts vs. opinion writing), and a different metadata structure
-(``primary_category`` is institutional taxonomy, not user-supplied
-sentiment).
+corpus, just a regrouping, which the resit guide explicitly disallows. 
+ArXiv is a different source (academic prose vs. consumer reviews), 
+a different genre (compressed scientificabstracts vs. opinion writing), 
+and a different metadata structure(``primary_category`` is institutional
+taxonomy, not user-supplied sentiment).
 
 ## Why six categories and not fewer
 
