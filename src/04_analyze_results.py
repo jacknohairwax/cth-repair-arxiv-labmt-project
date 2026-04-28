@@ -333,7 +333,6 @@ def main() -> None:
     # Restrict to abstracts whose primary_category is one of the six target
     # categories. This applies the same like-for-like comparison described
     # above and in the README.
-   
     n_before_target = len(scored)
     scored = scored[scored["primary_category"].isin(TARGET_CATEGORIES)].copy()
     clean = clean[clean["primary_category"].isin(TARGET_CATEGORIES)].copy()
