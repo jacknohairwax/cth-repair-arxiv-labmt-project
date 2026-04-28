@@ -43,7 +43,7 @@ its matched tokens and the per-document mean becomes dominated by a
 handful of words. Coverage already collapses. We chose to preserve the
 full lexicon and instead report coverage transparently.
 
-## What "matched_token_count >= 5" buys us
+## Why use matched_token_count >= 5
 
 It removes abstracts so dense in jargon (e.g. pure mathematics with very
 few English words after the title) that a single labMT match would
