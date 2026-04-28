@@ -36,12 +36,12 @@ without earning its complexity.
 
 Dodds et al. (2011) introduce a "stop band" of [4, 6] for time-series
 hedonometer applications — words near the neutral midpoint are dropped
-to make day-over-day shifts more visible. We are not doing time series.
-We are scoring single short documents (~150 tokens after tokenisation).
+to make day-over-day shifts more visible. This project is not doing time series.
+This project scores short documents. (~150 tokens after tokenisation).
 If we drop everything in [4, 6], a typical abstract loses two-thirds of
 its matched tokens and the per-document mean becomes dominated by a
-handful of words. Coverage already collapses. We chose to preserve the
-full lexicon and instead report coverage transparently.
+handful of words. Coverage already collapses. I kept the full lexicon
+and report coverage instead.
 
 ## Why use matched_token_count >= 5
 
@@ -68,6 +68,6 @@ more credible.
 - Stop-word removal. Function words like ``the`` are mostly not in
   labMT and so are already absent from the matched-token set; removing
   them upstream would only inflate the OOV count.
-- Topic modelling. We are not trying to *explain* what abstracts are
-  about, only to compare what fraction of their words land in a
+- Topic modelling. This project is not trying to explain what abstracts are about.
+  Only to compare what fraction of their words land in a
   general-English happiness lexicon, and what those words tend to score.
