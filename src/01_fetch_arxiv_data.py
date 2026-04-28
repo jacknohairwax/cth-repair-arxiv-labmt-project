@@ -20,7 +20,7 @@ Design notes
   or to omit from the repo.
 * This script uses only the standard library + a small XML feed parser (``feedparser``
   is intentionally avoided to keep the dependency surface tiny). The arXiv
-  API returns Atom XML; I parse the bits we need with ``xml.etree``.
+  API returns Atom XML; the needed fields are parsed with ``xml.etree``.
 * This script does no scoring and no plotting. It is purely an extraction
   step. See ``02_clean_data.py`` for the next stage.
 
