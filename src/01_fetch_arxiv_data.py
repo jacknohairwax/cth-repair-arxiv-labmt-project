@@ -16,12 +16,12 @@ Design notes
 ------------
 * The arXiv API is queried per category, paginated 100 results at a time.
 * The script sleeps between requests (the arXiv ToU asks for ~3 seconds
-  between calls; we use 3.0 seconds to be safe).
+  between calls; so I use 3.0 seconds to be safe).
 * No API key is needed and none is sent. There is nothing secret to commit
   or to omit from the repo.
-* We use only the standard library + a small XML feed parser (``feedparser``
+* I use only the standard library + a small XML feed parser (``feedparser``
   is intentionally avoided to keep the dependency surface tiny). The arXiv
-  API returns Atom XML; we parse the bits we need with ``xml.etree``.
+  API returns Atom XML; I parse the bits we need with ``xml.etree``.
 * This script does no scoring and no plotting. It is purely an extraction
   step. See ``02_clean_data.py`` for the next stage.
 
@@ -49,14 +49,14 @@ from pathlib import Path
 # ``[SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate``
 # the first time it follows arXiv's HTTP -> HTTPS redirect.
 #
-# We try, in order:
+# I try, in order:
 #   1. ``certifi`` if it is installed (the wrapper script ``run_fetch.command``
 #      installs it for the user automatically).
 #   2. The default SSL context (works on Linux and on macOS installs that
 #      have already been certified, e.g. by Python's
 #      ``Install Certificates.command``).
 #
-# We never disable certificate verification.
+# I never disable certificate verification.
 
 def _build_ssl_context() -> ssl.SSLContext:
     try:
