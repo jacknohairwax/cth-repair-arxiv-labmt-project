@@ -65,8 +65,8 @@ TABLES_DIR: Path = Path("tables")
 FIG_DIR: Path = Path("figures")
 
 # Primary threshold. Justification (also in README): arXiv abstracts are
-# longer than headlines, so even after filtering OOV tokens, a typical
-# abstract still gives us tens of matched tokens. Setting min matched to 5
+# longer than headlines, so even after filtering OOV tokens, a typical 
+# abstract still contributes tens of matched tokens. Setting min matched to 5
 # rules out near-empty or extremely jargon-dense abstracts whose mean would
 # be dominated by one or two words, while still keeping most of the corpus.
 MIN_MATCHED: int = 5
