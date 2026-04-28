@@ -331,9 +331,9 @@ def main() -> None:
     labmt = _load_labmt()
 
     # Restrict to abstracts whose primary_category is one of the six target
-    # categories. arXiv cross-listing means a paper retrieved from cat:cs.AI
-    # may have a different primary_category (e.g. cs.LG); scoping here makes
-    # the comparison apples-to-apples.
+    # categories. This applies the same like-for-like comparison described
+    # above and in the README.
+   
     n_before_target = len(scored)
     scored = scored[scored["primary_category"].isin(TARGET_CATEGORIES)].copy()
     clean = clean[clean["primary_category"].isin(TARGET_CATEGORIES)].copy()
